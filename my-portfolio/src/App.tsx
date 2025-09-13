@@ -1,21 +1,27 @@
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
 
-function App() {
-  return (
-    <div className="relative">
-      <Navbar />
-      {/* Main content of the portfolio can go here */}
-      {/* Example placeholder for main content */}
-      <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 pt-20">
-        <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-200">
-          Welcome to My Portfolio
-        </h1>
-      </div>
-      {/* Footer */}
-      <Footer />
-    </div>
-  );
-}
+const queryClient = new QueryClient();
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
 
 export default App;
