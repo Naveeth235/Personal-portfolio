@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button";
 
 export default function Footer() {
   const socialLinks = [
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Github, href: "#", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/naveeth-lareef/", label: "LinkedIn" },
+    { icon: Instagram, href: "https://www.instagram.com/_nav235?igsh=MXV1bm1rMG9kdHZldA==", label: "Instagram" },
+    { icon: Github, href: "https://github.com/Naveeth235", label: "GitHub" },
   ];
 
   return (
@@ -14,7 +14,7 @@ export default function Footer() {
         
         {/* Left Section */}
         <div className="text-center md:text-left space-y-2">
-          <h2 className="font-bold text-xl gradient-text">NAVEETH LAREEF</h2>
+          <h2 className="font-bold text-xl text-white">NAVEETH LAREEF</h2>
           <p className="text-primary-foreground/80 text-sm max-w-md">
             CS undergrad passionate about turning innovative ideas into elegant code.
           </p>
