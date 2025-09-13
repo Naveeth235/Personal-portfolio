@@ -10,7 +10,7 @@ const Projects = () => {
       tags: ["Java Spring Boot", "React", "MongoDB", "JWT", "REST APIs"],
       date: "2025",
       status: "Completed",
-      github: "#",
+      github: "https://github.com/Naveeth235/FreshRoots.git",
       image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=300&fit=crop"
     },
     {
@@ -19,7 +19,7 @@ const Projects = () => {
       tags: ["C#", "ASP.NET Core", "React", "Azure SQL", "Docker", "Azure DevOps"],
       date: "2025",
       status: "In Progress",
-      github: "#",
+      github: "https://github.com/Kanchan1015/PetCarePlus.git",
       image: "https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=600&h=300&fit=crop"
     },
     {
@@ -28,7 +28,7 @@ const Projects = () => {
       tags: ["Java Spring Boot", "React", "Microservices", "PostgreSQL", "Eureka", "OpenFeign"],
       date: "2025",
       status: "In Progress",
-      github: "#",
+      github: "https://github.com/Naveeth235/NexusLearn.git",
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=300&fit=crop"
     },
     {
@@ -55,7 +55,7 @@ const Projects = () => {
       tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
       date: "2024",
       status: "Completed",
-      github: "#",
+      github: "https://github.com/Naveeth235/Personal-portfolio.git",
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=300&fit=crop"
     }
   ];
@@ -164,9 +164,12 @@ const Projects = () => {
             variant="outline" 
             size="lg"
             className="px-8 py-6 text-lg border-2 border-primary hover:bg-primary hover:text-primary-foreground transition-bounce group"
+            asChild
           >
-            <Github className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-            View All Projects on GitHub
+            <a href="https://github.com/Naveeth235" target="_blank" rel="noopener noreferrer">
+              <Github className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+              View All Projects on GitHub
+            </a>
           </Button>
         </div>
       </div>
