@@ -39,28 +39,8 @@ const Hero = () => {
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl lg:max-w-none mx-auto lg:mx-0 leading-relaxed">
               Computer Science Student & Full-Stack Developer,
-              Passionate about creating innovative digital solutions
+              passionate about creating innovative digital solutions.
             </p>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center lg:justify-start items-center animate-slideInRight">
-            <Button 
-              size="lg" 
-              className="group bg-primary hover:bg-primary-glow text-primary-foreground px-6 lg:px-8 py-4 lg:py-6 text-base lg:text-lg glow-primary transition-bounce"
-            >
-              <ExternalLink className="w-4 lg:w-5 h-4 lg:h-5 mr-2 group-hover:scale-110 transition-transform" />
-              View My Work
-            </Button>
-            
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="group border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 lg:px-8 py-4 lg:py-6 text-base lg:text-lg transition-bounce"
-            >
-              <Download className="w-4 lg:w-5 h-4 lg:h-5 mr-2 group-hover:scale-110 transition-transform" />
-              Download Resume
-            </Button>
           </div>
         </div>
 
@@ -68,10 +48,10 @@ const Hero = () => {
         <div className="flex justify-center lg:justify-end animate-slideInLeft order-1 lg:order-2 mt-8 lg:mt-12">
           <div className="relative group">
             {/* Animated border ring */}
-            <div className="absolute -inset-2 lg:-inset-4 bg-gradient-to-r from-primary via-primary-glow to-accent rounded-full opacity-70 group-hover:opacity-100 animate-pulse blur-lg transition-all duration-500000"></div>
+            <div className="absolute -inset-2 lg:-inset-4 bg-gradient-to-r from-primary via-primary-glow to-accent rounded-full opacity-70 group-hover:opacity-100 blur-lg transition-all duration-500"></div>
             
             {/* Main image container */}
-            <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[26rem] xl:h-[26rem] rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl group-hover:scale-105 transition-all duration-5000000">
+            <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[26rem] xl:h-[26rem] rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl group-hover:scale-105 transition-all duration-500">
               <img
                 src={profileImage}
                 alt="Naveeth Lareef"
@@ -83,15 +63,15 @@ const Hero = () => {
             </div>
 
             {/* Floating accent elements */}
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full animate-ping opacity-60"></div>
-            <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-accent/40 rounded-full animate-pulse"></div>
+            <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full opacity-60"></div>
+            <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-accent/40 rounded-full"></div>
           </div>
         </div>
       </div>
 
       {/* Gradient Orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 hero-gradient rounded-full opacity-20 blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 hero-gradient rounded-full opacity-15 blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 hero-gradient rounded-full opacity-20 blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 hero-gradient rounded-full opacity-15 blur-3xl"></div>
     </section>
   );
 };
