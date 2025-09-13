@@ -1,44 +1,56 @@
-import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+import { Instagram, Linkedin, Github, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Footer() {
+  const socialLinks = [
+    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Github, href: "#", label: "GitHub" },
+  ];
+
   return (
-    <footer className="bg-blue-700 text-white py-10 rounded-t-3xl shadow-lg">
-      <div className="max-w-7xl mx-auto px-10 md:px-16 md:pl-30 grid md:grid-cols-3 gap-8 items-center">
+    <footer className="bg-primary text-primary-foreground py-8 rounded-t-3xl shadow-lg mt-20">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+        
         {/* Left Section */}
-        <div>
-          <h2 className="font-extrabold text-2xl">NAVEETH LAREEF</h2>
-          <p className="mt-3 text-gray-300 text-m leading-relaxed">
-            CS undergrad who loves turning ideas into code and 
-            exploring web development, problem-solving, and all things tech.
+        <div className="text-center md:text-left space-y-2">
+          <h2 className="font-bold text-xl gradient-text">NAVEETH LAREEF</h2>
+          <p className="text-primary-foreground/80 text-sm max-w-md">
+            CS undergrad passionate about turning innovative ideas into elegant code.
           </p>
-          <p className="mt-4 text-black text-md leading-relaxed">
-            Copyright © 2025 All Rights Reserved.
+          <p className="text-primary-foreground/60 text-xs">
+            © 2025 All Rights Reserved.
           </p>
         </div>
 
-        {/* Sitemap */}
-        <div className="text-center md:text-centre md:pl-20">
-          <h3 className="font-bold mb-3 text-3xl">SITEMAP</h3>
-          <ul className="space-y-1.5 text-lg">
-            <li><a href="#" className="hover:text-black">Home</a></li>
-            <li><a href="#" className="hover:text-black">About Me</a></li>
-            <li><a href="#" className="hover:text-black">Projects</a></li>
-            <li><a href="#" className="hover:text-black">Contact</a></li>
-          </ul>
+        {/* Right Section - Social + Contact */}
+        <div className="flex flex-col items-center gap-4">
+          <div className="flex space-x-3">
+            {socialLinks.map(({ icon: Icon, href, label }) => (
+              <a
+                key={label}
+                href={href}
+                className="p-2 rounded-full bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-smooth hover:scale-110"
+                aria-label={label}
+              >
+                <Icon size={18} />
+              </a>
+            ))}
+          </div>
+          
+          <Button
+            variant="outline"
+            size="sm"
+            className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-smooth text-xs px-4 py-2"
+            asChild
+          >
+            <a href="#contact">
+              <Mail className="w-4 h-4 mr-1" />
+              CONTACT ME
+            </a>
+          </Button>
         </div>
-
-        {/* Social + Contact */}
-        <div className="flex flex-col items-center space-y-4">
-            <div className="flex space-x-5 text-2xl justify-center">
-                <a href="#" className="hover:text-black transition-transform transform hover:scale-125"><FaLinkedin /></a>
-                <a href="#" className="hover:text-black transition-transform transform hover:scale-125"><FaInstagram /></a>
-                <a href="#" className="hover:text-black transition-transform transform hover:scale-125"><FaGithub /></a>
-            </div>
-            <button className="border border-white px-6 py-2 rounded-lg hover:bg-black hover:border-black hover:text-white transition">
-                CONTACT ME
-            </button>
-            </div>
-        </div>
+      </div>
     </footer>
   );
 }
