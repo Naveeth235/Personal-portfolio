@@ -32,6 +32,15 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=300&fit=crop"
     },
     {
+      title: "FormLang++ – Domain-Specific Language for Dynamic Form Generation",
+      description: "A Domain-Specific Language (DSL) for creating interactive HTML forms with validation. Built lexer with Lex and parser with Yacc (Bison) to translate DSL scripts into clean HTML. Supports multiple field types, validation rules, and automated HTML generation with proper formatting.",
+      tags: ["Lex", "Yacc (Bison)", "C", "HTML", "CSS"],
+      date: "2025",
+      status: "Completed",
+      github: "#",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=300&fit=crop"
+    },
+    {
       title: "FliSuper – Full-Stack E-Commerce Application",
       description: "A comprehensive e-commerce platform with customer features like product listings, search/sorting, cart & checkout with multiple payment options, and promo codes. Includes admin dashboard for managing products, orders, and users with JWT authentication.",
       tags: ["Java Spring Boot", "React", "MySQL", "JWT", "Spring Security", "REST APIs", "CSS"],
