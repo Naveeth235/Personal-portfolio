@@ -137,7 +137,7 @@ const Contact = () => {
               className="px-8 py-6 text-lg bg-primary hover:bg-primary-glow text-primary-foreground glow-primary transition-bounce group"
               asChild
             >
-              <a href="#" download>
+              <a href="/NaveethLareef-CV.pdf" download>
                 <Download className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Download Resume
               </a>
