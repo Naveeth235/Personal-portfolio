@@ -45,7 +45,7 @@ const Hero = () => {
         </div>
 
         {/* Right Side - Profile Image */}
-        <div className="flex justify-center lg:justify-end animate-slideInLeft order-1 lg:order-2 mt-8 lg:mt-12">
+  <div className="flex justify-center lg:justify-end animate-slideInLeft order-1 lg:order-2 mt-4 lg:mt-12">
           <div className="relative group">
             {/* Animated border ring */}
             <div className="absolute -inset-2 lg:-inset-4 bg-gradient-to-r from-primary via-primary-glow to-accent rounded-full opacity-70 group-hover:opacity-100 blur-lg transition-all duration-500"></div>
